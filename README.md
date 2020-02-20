@@ -43,3 +43,5 @@ Follow the coach instructions and good luck!
 Working on GitHub Actions
 
 Working with Security Operations
+
+Working on the Security Operations - No Direct push to Master
