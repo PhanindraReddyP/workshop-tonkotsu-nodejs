@@ -38,7 +38,7 @@ jobs:
     # Name of the Azure Web App
        app-name: actiondeploy
     # Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
-       package: package.json
+    #   package: package.json
     # Enter an existing Slot other than the Production slot
     #   slot-name: # optional, default is production
     
