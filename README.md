@@ -41,3 +41,5 @@ npm start
 Follow the coach instructions and good luck!
 
 Working on GitHub Actions
+
+Working with Security Operations
