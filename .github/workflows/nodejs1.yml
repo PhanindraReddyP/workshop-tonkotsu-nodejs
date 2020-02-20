@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Node.js CI - 2
 
 on: [push]
 
@@ -23,34 +23,22 @@ jobs:
       env:
         CI: true
     
-    - run: |
-        echo '*****************'
-        ls -lart /home/runner/work/workshop-tonkotsu-nodejs/workshop-tonkotsu-nodejs
-        echo '*****************'
     
- #   - name: Upload artifact
- #     uses: actions/upload-artifact@v1.0.0
- #     with:
-    # Artifact name
- #      name: 
-    # Directory containing files to upload
- #      path: 
-    
- #   - name: Azure Login
- #     uses: Azure/login@v1
-#      with:
+    - name: Azure Login
+      uses: Azure/login@v1
+      with:
     # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
-#        creds: ${{ secrets.Azure_Login }}
+        creds: ${{ secrets.Azure_Login }}
     
-#    - name: Azure WebApp
- #     uses: Azure/webapps-deploy@v1
- #     with:
+    - name: Azure WebApp
+      uses: Azure/webapps-deploy@v1
+      with:
     # Publish profile (*.publishsettings) file contents with Web Deploy secrets
-#       publish-profile: ${{ secrets.WebApp_Publisher_Profile }}
+       publish-profile: ${{ secrets.WebApp_Publisher_Profile }}
     # Name of the Azure Web App
-#       app-name: actiondeploy
+       app-name: actiondeploy
     # Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
-#       package: 
+       package: package.json
     # Enter an existing Slot other than the Production slot
     #   slot-name: # optional, default is production
     
