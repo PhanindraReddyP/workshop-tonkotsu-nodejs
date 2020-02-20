@@ -34,11 +34,11 @@ jobs:
       uses: Azure/webapps-deploy@v1
       with:
     # Publish profile (*.publishsettings) file contents with Web Deploy secrets
-       publish-profile: ${{ secrets.webapp_azure }}
+    #   publish-profile: ${{ secrets.webapp_azure }}
     # Name of the Azure Web App
        app-name: githubaction
     # Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
-    #   package: package.json
+    #   package:
     # Enter an existing Slot other than the Production slot
     #   slot-name: # optional, default is production
     
